@@ -103,39 +103,3 @@ I) Les tables utilisées
           tag*       varchar(20) primary key foreign key Tags(tag),
 
 
-II) Classes utilisées ( Premier jet, à retravailler sérieusement )
-
-  Classe FamilleProduit(
-          String nom;
-          List<Produit>;
-          =====================
-          void add(Produit p);
-          List<Produit> getProduits();
-  )
-  Classe ZoneBloc(
-          List<familleProduit>;
-          Position p;
-          Dimension d;
-          =====================
-          void drawZone();
-  )
-  Classe abstraite ListProduit(
-          String nom;
-          List<Produit>;
-          =====================
-          void add(Produit p);
-          void remove(Produit p);
-          List<Produit> getProduits();
-  )
-  Classe Panier hérite de ListProduit(
-          =====================
-          void voir();
-  )
-  Classe Historique hérite de ListProduit(
-          =====================
-          void voir(index i);
-  )
-  Classe Model(
-          Client c;
-  )
-  
