@@ -1,4 +1,3 @@
-
 ===============================================================================================================
 Documentation du concept de Y-Commerce interactif
 ===============================================================================================================
@@ -59,3 +58,46 @@ IV) La recherche de produit classique
   
   Lorsque l'icône de recherche classique, la loupe en haut à droite de l'appli, est cliquée, un champ de saisie apparaît
   à sa gauche, et permet une recherche par tags, ou par nom.
+  
+  
+===============================================================================================================
+Les aspects techniques
+===============================================================================================================
+
+I) Les tables utilisées
+
+  L'aspect de sécurité n'a pas été abordé faute de compétences associées.
+  
+  table Client(
+          id          integer primary key,
+          login       varchar(20) not null,
+          mdp         varchar(20) not null,
+          adrLivr     varchar(30),
+          nom         varchar(20),
+          prenom      varchar(20),
+          tel         char(10)
+  )
+  table Moyen_de_payement(
+          id_pay     integer primary key,
+          id_client* integer primary key foreign key Client(id),
+          nb_cb      char(16) nut null,
+          date_exp   integer,
+          crypto     integer,
+          nom        varchar(30),
+  )
+  table Tags(
+          tag        varchar(20) primary key,
+          id_quest   integer     primary key,
+          libelle    varchar(30),
+  )
+  table Commande(
+          in_com     integer primary key,
+          ref*       integer primary key foreign key Produit(ref),
+          id_pay*    integer primary key foreign key MoyenDePayement(id_pay),
+          date_com   date not null,
+          date_livr  date,
+          totalht    integer
+  )
+  table Produit(
+          ref        integer primary key,
+          tag*       varchar(20) primary key foreign key Tags(tag),
