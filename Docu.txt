@@ -1,0 +1,61 @@
+
+===============================================================================================================
+Documentation du concept de Y-Commerce interactif
+===============================================================================================================
+
+Intro :
+
+  Notre problématique était de faire une application web remettant le client au centre du site de E-Commerce,
+qui est actuellement centré autour du produit à vendre.
+Nous avons décidé de faire une application interactive, à la manière d'un jeu "Point & click", tout en gardant
+un module de recherche classique (Par nom et par tags) pour les clients qui savent exactement le produit qu'ils recherchent.
+  Ce module de recherche serait présent sur toutes les "pages" de l'application, sous la forme d'une image de loupe
+  cliquable, qui ferait se déployer un champ de recherche classique.
+
+
+===============================================================================================================
+
+I) L'accueil
+  
+  La page d'accueil de l'application est une page simple, avec des boutons pour des catégories, et un nom pour chaque
+  pièce de la maison 
+    Le bouton serait composé d'une image, par exemple une photo d'un salon, et d'un label en dessous, dans notre
+    example, "Votre salon".
+  Originellement, il y aura 3 boutons : La chambre, le salon, et le bureau.
+  Bien évidemment, le nombre de boutons est amené à évoluer selon le nombre de catégories d'objets vendus.
+  
+===============================================================================================================
+
+II) La pièce
+  
+  Lorsqu'une pièce, telle que la chambre, est choisie, l'application charge une image d'une chambre à coucher,
+  où les objets de la pièces seraient cliquables, par exemple, le lit.
+  
+===============================================================================================================
+
+III) La recherche de produit interactive
+
+  Lorsqu'un objet dans une pièce est cliquée, un pop-up apparait dans la frame java, où, la première fois qu'on clique sur
+  l'objet, on demande au client s'il possède déjà un objet de ce type, pour enregister l'information et lui proposer des
+  consommables en rapport avec celui-ci.
+  
+  La recherche d'objet se déroulerait sous la forme d'une succession de questions "Oui, non" pour déterminer la nature
+  et les détails de l'objet recherché, à la manière du jeu "Akinator", grâce à des tags listés grâce aux réponses.
+  Lorsqu'un objet correspond aux tags acquis par le questionnaire, il est proposé au client avec une image, un nom et une
+  description. En dessous, trois boutons : "Ajouter au panier", "Je continue ma recherche", "Je n'ai pas trouvé ce que je veux"
+  
+  o Ajouter au panier, rajoute le produit au panier.
+  
+  o Je continue ma recherche renvoie sur le questionnaire.
+  
+  o Je n'ai pas trouvé ce que je cherchais permet de saisir le nom du produit que le client recherchait, et qui n'est pas
+  dans le catalogue actuel.
+    Le nom de l'objet et les tags sont enregistrés dans une table de "Produits demandés", qui servira à ajouter des
+    articles au catalogue plus tard.
+    
+===============================================================================================================
+
+IV) La recherche de produit classique
+  
+  Lorsque l'icône de recherche classique, la loupe en haut à droite de l'appli, est cliquée, un champ de saisie apparaît
+  à sa gauche, et permet une recherche par tags, ou par nom.
