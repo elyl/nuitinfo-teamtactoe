@@ -97,7 +97,7 @@ I) Les tables utilisées
           id_pay*    integer primary key foreign key MoyenDePayement(id_pay),
           date_com   date not null,
           date_livr  date,
-          totalht    integer
+          totalht    numeric(8,2)
   )
   table Produit(
           ref        integer primary key,
