@@ -102,5 +102,24 @@ I) Les tables utilisées
   table Produit(
           ref        integer primary key,
           tag*       varchar(20) primary key foreign key Tags(tag),
-
-
+          id_quest*  varchar(30) primary key foreign key Tags(id_quest),
+          label      varchar(30),
+          prix       numeric(8,2),
+          descr      varchar(80),
+          stock      integer,
+          image      varchar(30)
+  )
+  table FamilleProd(
+          ref*        integer primary key foreign key Produit(ref),
+          famille*    varchar(30) primary key foreign key Famille(famille)
+  )
+  table Famille(
+          famille    varchar(30) primary key,
+          image      varchar(30),
+          descr      varchar(80)
+  )
+  table TagsFamille(
+          tag*       varchar(20) primary key,
+          id_quest*  integer     primary key,
+          descr      varchar(80)
+  )
