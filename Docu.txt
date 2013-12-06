@@ -28,18 +28,19 @@ I) L'accueil
 II) La pièce
   
   Lorsqu'une pièce, telle que la chambre, est choisie, l'application charge une image d'une chambre à coucher,
-  où les objets de la pièces seraient cliquables, par exemple, le lit.
+  où les espaces principaux sont cliquables, par exemple la zone "lit".
   
 ===============================================================================================================
 
 III) La recherche de produit interactive
 
-  Lorsqu'un objet dans une pièce est cliquée, un pop-up apparait dans la frame java, où, la première fois qu'on clique sur
-  l'objet, on demande au client s'il possède déjà un objet de ce type, pour enregister l'information et lui proposer des
-  consommables en rapport avec celui-ci.
+  Lorsqu'une zone dans une pièce est cliquée, un pop-up apparait, où, la première fois qu'on clique sur
+  la zone, on demande au client s'il possède déjà un objet du type qu'il recherche, pour enregister l'information et
+  lui proposer des consommables en rapport avec celui-ci.
   
   La recherche d'objet se déroulerait sous la forme d'une succession de questions "Oui, non" pour déterminer la nature
-  et les détails de l'objet recherché, à la manière du jeu "Akinator", grâce à des tags listés grâce aux réponses.
+  et les détails de l'objet recherché, à la manière du jeu "Akinator", basé sur le besoin du client, 
+  grâce à des tags listés grâce aux réponses.
   Lorsqu'un objet correspond aux tags acquis par le questionnaire, il est proposé au client avec une image, un nom et une
   description. En dessous, trois boutons : "Ajouter au panier", "Je continue ma recherche", "Je n'ai pas trouvé ce que je veux"
   
