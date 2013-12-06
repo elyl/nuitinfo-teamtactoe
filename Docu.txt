@@ -81,7 +81,7 @@ I) Les tables utilisées
   table Moyen_de_payement(
           id_pay     integer primary key,
           id_client* integer primary key foreign key Client(id),
-          nb_cb      char(16) nut null,
+          nb_cb      char(16) not null,
           date_exp   integer,
           crypto     integer,
           nom        varchar(30),
